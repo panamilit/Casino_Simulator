@@ -1,6 +1,5 @@
 from casino.player import Player
-from casino.games import coin_flip, coin_flip_is_win
-
+from casino.games import coin_flip, coin_flip_is_win, spin_slots, get_slots_multiplier
 
 
 def play_flat_bet(player: Player, 
@@ -17,7 +16,6 @@ def play_flat_bet(player: Player,
     return (rounds_played, player.balance)
 
 
-
 def play_coinflip_round(player: Player, bet_amount: int, chosen_side: str) -> tuple[bool, str]:
     if player.balance < bet_amount:
         raise ValueError("Not enough balance")
@@ -26,7 +24,6 @@ def play_coinflip_round(player: Player, bet_amount: int, chosen_side: str) -> tu
     if win:
         player.win(bet_amount * 2)
     return win, result_side 
-
 
 
 def play_martingale(player: Player, base_bet: int, n_rounds: int, side: str):
@@ -43,3 +40,15 @@ def play_martingale(player: Player, base_bet: int, n_rounds: int, side: str):
         rounds_played += 1
     return rounds_played, player.balance
 
+
+def play_slots_round(player: Player, bet_amount: int) -> tuple[bool, list[str], int]:
+    if player.balance < bet_amount:
+        raise ValueError("Not enough balance")
+    player.bet(bet_amount)
+    result = spin_slots()
+    multiplier = get_slots_multiplier(result=result)
+    win = multiplier > 0
+    if multiplier > 0:
+        player.win(bet_amount * multiplier)
+
+    return win, result, multiplier

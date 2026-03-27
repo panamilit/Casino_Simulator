@@ -8,6 +8,7 @@ Includes Coin Flip game with:
 - Manual play
 - Flat bet simulation
 - Martingale simulation
+- Slots simulation
 
 UI built with Tkinter + PNG assets + background music.
 
@@ -57,6 +58,7 @@ python main_ui.py
 
 Manual: play one round at a time
 Flat bet / Martingale: runs animated simulation step-by-step
+Slots: play one round at a time
 
 Settings: volume slider + export logs
 
@@ -64,6 +66,6 @@ Settings: volume slider + export logs
 ## Roadmap (future updates)
 
 - Roulette (red/black)
-- Slots
+- Slots (Done☑️)
 - Statistics screen
 - Better animations (coin flip frames)
