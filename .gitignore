@@ -16,3 +16,5 @@ Thumbs.db
 # logs / outputs
 casino_logs.txt
 *.log
+
+.env
