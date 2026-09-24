@@ -59,9 +59,9 @@ python main_ui.py
 
 ## Controls
 
-Manual: play one round at a time
+**Manual:** play one round at a time
 Flat bet / Martingale: runs animated simulation step-by-step
-Slots: play one round at a time
+**Slots:** play one round at a time
 
 Settings: volume slider + export logs
 
