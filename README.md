@@ -1,3 +1,6 @@
+![Logo](https://i.ibb.co/TxTNTNVC/logo.png)
+
+
 # CASINO SIMULATOR (Python)
 
 # Author: panamilit
