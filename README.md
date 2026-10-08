@@ -1,5 +1,4 @@
-![Logo](https://i.ibb.co/TxTNTNVC/logo.png)
-
+<p align="center"><img src="https://i.ibb.co/TxTNTNVC/logo.png"></p>
 
 # CASINO SIMULATOR (Python)
 
